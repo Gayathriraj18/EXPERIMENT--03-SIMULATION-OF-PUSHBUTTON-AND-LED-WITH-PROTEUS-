@@ -109,7 +109,11 @@ int main(void)
 
 ## Output screen shots of proteus  :
 
+# LED OFF CONDITION :
+
 ![p3 1](https://user-images.githubusercontent.com/94154854/236901512-5f4bf922-b4d8-4d09-9f52-e8f8f500b5a4.png)
+
+# LED ON CONDITION :
 
 ![p3 2](https://user-images.githubusercontent.com/94154854/236901541-7558dd88-e994-410e-820e-22b21c0f6c1b.png)
 
