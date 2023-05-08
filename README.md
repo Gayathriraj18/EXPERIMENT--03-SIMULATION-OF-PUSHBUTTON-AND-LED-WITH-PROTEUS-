@@ -71,17 +71,54 @@ We are now at the last part of step by step guide on how to simulate STM32 proje
 
 
 ## STM 32 CUBE PROGRAM :
+```
+NAME: GAYATHRI A
+REGISTER NUMBER: 21221230028
 
+#include "main.h"
+#include "stdio.h"
+#include "stdbool.h"
+bool pushbutton;
+void SystemClock_Config(void);
+static void MX_GPIO_Init(void);
+int main(void)
+{
+  HAL_Init();
+  SystemClock_Config();
+  MX_GPIO_Init();
+  while (1)
+  {
+	  pushbutton = HAL_GPIO_ReadPin(GPIOA,GPIO_PIN_4);
+	  	  if (pushbutton == 0)
+	  	    {
+	  		  HAL_GPIO_WritePin(GPIOA,GPIO_PIN_5,GPIO_PIN_SET);
+	  		  HAL_Delay(250);
+	  		  HAL_GPIO_WritePin(GPIOA,GPIO_PIN_5,GPIO_PIN_RESET);
+	  		  HAL_Delay(250);
+	  	    }
+	  	  else
+	  		{
+	  		  HAL_GPIO_WritePin(GPIOA,GPIO_PIN_5,GPIO_PIN_RESET);
+	  		  HAL_Delay(500);
+	  		}
+  }
+}
+```
 
 
 
 ## Output screen shots of proteus  :
 
+![p3 1](https://user-images.githubusercontent.com/94154854/236901512-5f4bf922-b4d8-4d09-9f52-e8f8f500b5a4.png)
+
+![p3 2](https://user-images.githubusercontent.com/94154854/236901541-7558dd88-e994-410e-820e-22b21c0f6c1b.png)
 
 
 
-## Proteus layout(Add pdf screen shot of circuit here)
+
+## Proteus layout(Add pdf screen shot of circuit here) :
  
+![p3 3](https://user-images.githubusercontent.com/94154854/236901579-cac8ca1f-d0a8-4409-95ef-794dc172a3d2.png)
  
  
  
